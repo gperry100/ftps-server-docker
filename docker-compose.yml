@@ -1,0 +1,10 @@
+version: '3'
+services:
+  pureftp:
+    build: .
+    environment:
+      - PUBLICHOST=localhost
+      - ADDED_FLAGS=--tls=2
+    ports: 
+      - "30000-30009:30000-30009"
+      - "21:21"
